@@ -1,8 +1,21 @@
 <button>Click me</button>
+<button> dont touch me </button>
+<button> what do you want </button>
+
 <p>No handler here.</p>
 <script>
   var button = document.querySelector("button");
   button.addEventListener("click", function() {
+
     console.log("Button clicked.");
+
   });
+document.body.addEventListener("click", function(event) {
+	if (event.target.nodeName == "Button")
+	console.log("Go away", event.target.textContent);
+})
+
+
+
+
 </script>
